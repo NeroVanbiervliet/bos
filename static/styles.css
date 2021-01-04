@@ -1,0 +1,137 @@
+body {
+  font-family : "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1 {
+    text-align : center;
+}
+
+h2 {
+  text-align : center;
+}
+
+h4 {
+    text-align : center;
+    font-style : italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#navbar {
+  width : 100%;
+}
+
+#caption {
+  font-style : italic;
+  text-align : center;
+}
+
+td.hordisp {
+  width : 60%;
+  text-align: center;
+
+}
+
+div.discussion {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-size: small;
+}
+
+#bikeWJ {
+    width : 10%;
+    position: relative;
+    animation: mymoveWJ 15s infinite;
+}
+
+@keyframes mymoveWJ {
+    0% { left: 80px;}
+    90% { left: 99%;}
+}
+
+#bikeIDRIS {
+    width : 14%;
+    position: relative;
+    animation: mymoveIDRIS 15s infinite;
+}
+
+@keyframes mymoveIDRIS {
+    0% { left: 80px;}
+    50% { left: 70%;}
+    99% { left: 85%;}
+}
+
+.likebutton {
+  float : right;
+}
+
+.commentfield {
+    float : left;
+    margin-left: 15px;
+    font-size: small;
+    vertical-align: top;
+}
+
+#commentcell {
+  margin-left: 15px;
+}
+
+.inputfield {
+  width: 100%;
+}
+
+.nameinbox {
+    font-weight : 600;
+    color : black;
+}
+
+.discussion_vertical {
+    height: 300px;
+    overflow: scroll;
+}
+
+/* source https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+* {
+    box-sizing: border-box;
+  }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

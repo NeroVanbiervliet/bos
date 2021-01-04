@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>bos van bompapa</title>
+        <link rel="stylesheet" href="../../static/styles.css">
+        <script src="../../static/js.js"></script>
+    </head>
+    <h2>Wijle nog eens weg: Bos van Bompapa</h2>
+    <p id="caption">Nero after blowing up some Germans</p>
+    <body>
+        <hr>
+        <table id="navbar">
+            <tr>
+                <th>
+                    <a href="./014.html">Vorige</a>
+                </th>
+                <th>
+                    <a href="../bos.html">Terug naar overzicht</a>
+                </th>
+                <th>
+                    <a href="./016.html">Volgende</a>
+                </th>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:100%">
+            <tr>
+                <td class="hordisp">
+                    <image alt="Nero after blowing up some Germans" src="../static/kiekjes/015.jpg" style="width: 40%; height: auto">
+                </td>
+                <td style="vertical-align: top;">
+                    <div class="discussion">
+                    <ul>
+                        {% for x in chat %}
+                            {% if x["imgID"] == 15 %}
+                                {% if x["usr"] != None and x["usr"] != "" %}
+                                    <p><div class="nameinbox">{{x["usr"]}}:</div> <br>{{x["comment"]}}<hr></p>
+                                {% else %}
+                                    <p><div class="nameinbox">Anonieme gluurder:</div> <br>{{x["comment"]}}<hr></p>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {% if rows[15]["likes"] == 0 %}
+                        No likes yet for this picture, give some love pls
+                    {% else %}
+                        {{rows[15]["likes"]}} likes
+                    {% endif %}
+                    <button class="likebutton" type="button" onclick="window.location.href='/indv/like015';">Me like!</button>
+
+                </td>
+                <td id="commentcell">
+                    <div class="commentfield">
+                    <form action="/indv/com015">
+                        <table>
+                            <tr><td>Naam: </td><td><input name="usr" type="text"></td></tr>
+                            <tr><td>Comment: </td><td><input name="comment" type="text" class="inputfield"></td><td><input type="submit"></td></tr>
+                            </table>
+                    </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
